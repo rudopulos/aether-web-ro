@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary-blue: #2596E7;
+  --dark-blue: #0A2D4D;
+  --light-bg: #FFFFFF;
+  --text-dark: #0A2D4D;
+  --text-light: #5a6978;
+}
+
+body {
+  @apply bg-[var(--light-bg)] text-[var(--text-light)];
+  font-family: 'Poppins', sans-serif;
+}
+
+@layer utilities {
+  .primary-text {
+    @apply text-[var(--primary-blue)];
+  }
+  
+  .dark-text {
+    @apply text-[var(--dark-blue)];
+  }
+  .opacity-full-important {
+    opacity: 1 !important;
+  }
+}
