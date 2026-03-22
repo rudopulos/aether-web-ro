@@ -25,7 +25,7 @@ jobs:
         run: npm ci
 
       - name: Build
-        run: npx vite build
+        run: npx vite build --base=/aether-web-ro/
         env:
           NODE_ENV: production
 
