@@ -2,6 +2,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet';
 import { motion } from 'framer-motion';
 import { Target, Eye, Users, Award } from 'lucide-react';
+import founderImg from '/founder.JPG';
 
 const About = () => {
   const fadeInUp = {
@@ -106,7 +107,7 @@ const About = () => {
             <div className="w-48 h-48 md:w-64 md:h-64 flex-shrink-0 rounded-full overflow-hidden border-4 border-white/20 shadow-xl relative group">
                 {/* Poza fondatorului va fi preluată din folderul public */}
               <img 
-                src="/founder.JPG" 
+                src={founderImg} 
                 alt="Radu - Fondator Aether Web Technologies" 
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
               />
