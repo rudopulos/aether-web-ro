@@ -50,11 +50,11 @@ const Footer = () => {
             <div className="flex flex-col space-y-3">
               <div className="flex items-center space-x-2 text-sm">
                 <Mail size={16} className="primary-text" />
-                <span>contact@aetherweb.tech</span>
+                <span>aetherweb.tech@gmail.com</span>
               </div>
               <div className="flex items-center space-x-2 text-sm">
                 <Phone size={16} className="primary-text" />
-                <span>+40 123 456 789</span>
+                <span>0744915610</span>
               </div>
               <div className="flex items-center space-x-2 text-sm">
                 <MapPin size={16} className="primary-text" />

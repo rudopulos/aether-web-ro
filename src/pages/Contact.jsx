@@ -42,14 +42,14 @@ const Contact = () => {
     {
       icon: <Mail className="w-6 h-6 text-[var(--primary-blue)]" />,
       title: 'Email',
-      content: 'contact@aetherweb.tech',
-      link: 'mailto:contact@aetherweb.tech'
+      content: 'aetherweb.tech@gmail.com',
+      link: 'mailto:aetherweb.tech@gmail.com'
     },
     {
       icon: <Phone className="w-6 h-6 text-[var(--primary-blue)]" />,
       title: 'Telefon',
-      content: '+40 123 456 789',
-      link: 'tel:+40123456789'
+      content: '0744915610',
+      link: 'tel:0744915610'
     },
     {
       icon: <MapPin className="w-6 h-6 text-[var(--primary-blue)]" />,
@@ -207,23 +207,7 @@ const Contact = () => {
                 </div>
               </div>
 
-              <div className="bg-white rounded-2xl shadow-lg p-8 border border-gray-100">
-                <h3 className="text-2xl font-bold dark-text mb-4">Program</h3>
-                <div className="space-y-3 text-[var(--text-light)]">
-                  <div className="flex justify-between">
-                    <span className="font-medium dark-text">Luni - Vineri:</span>
-                    <span>09:00 - 18:00</span>
-                  </div>
-                  <div className="flex justify-between">
-                    <span className="font-medium dark-text">Sâmbătă:</span>
-                    <span>10:00 - 14:00</span>
-                  </div>
-                  <div className="flex justify-between">
-                    <span className="font-medium dark-text">Duminică:</span>
-                    <span>Închis</span>
-                  </div>
-                </div>
-              </div>
+
             </motion.div>
           </div>
         </div>
