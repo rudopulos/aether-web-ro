@@ -6,7 +6,7 @@ import '@/index.css';
 import { Toaster } from '@/components/ui/toaster';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <BrowserRouter>
+  <BrowserRouter basename="/aether-web-ro/">
     <App />
     <Toaster />
   </BrowserRouter>
