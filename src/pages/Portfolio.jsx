@@ -10,25 +10,32 @@ const Portfolio = () => {
 
   const projects = [
     {
+      title: 'T3 Money Guard',
+      category: 'Web Application',
+      description: 'Aplicație avansată de management financiar personal (Personal Finance Tracker), cu istoric de tranzacții, statistici lunare și design premium adaptabil.',
+      image: 'https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&q=80&w=800',
+      url: 'https://rudopulos.github.io/T3-Money-Guard/'
+    },
+    {
+      title: 'WebStudio - Landing Page',
+      category: 'Web Development (Practice)',
+      description: 'Implementare modernă de landing page utilizând HTML semantic, cu arhitectură avansată SCSS și metodologie BEM, integrând funcționalități interactive prin JS nativ.',
+      image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=800',
+      url: 'https://rudopulos.github.io/goit-markup-hw-08/'
+    },
+    {
+      title: 'Barbershop',
+      category: 'Web Development (Practice)',
+      description: 'Implementare fidelă de la design Figma la website static, responsiv. Focus pe HTML semantic, SCSS și best practices BEM.',
+      image: 'https://rudopulos.github.io/barbershop/images/hero-slider-img1.jpg',
+      url: 'https://rudopulos.github.io/barbershop/'
+    },
+    {
       title: 'Elite Design',
       category: 'Site de Prezentare',
       description: 'Website de prezentare modern și sofisticat, optimizat vizual pentru a evidenția proiectele unei agenții de design.',
       image: 'https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&q=80&w=800',
       url: 'https://byelitedesign.com/'
-    },
-    {
-      title: 'Site de Prezentare Local',
-      category: 'Web Development',
-      description: 'Site profesional de prezentare pentru un business local, optimizat perfect pentru Google.',
-      image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=800',
-      url: null
-    },
-    {
-      title: 'Dashboard Gestiune',
-      category: 'UI/UX Concept',
-      description: 'Tablou de bord intern cu grafice în timp real pentru administrarea afacerii.',
-      image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=800',
-      url: null
     },
     {
       title: 'Sistem Rezervări Online',
@@ -38,17 +45,10 @@ const Portfolio = () => {
       url: null
     },
     {
-      title: 'Portofoliu Fotografie',
-      category: 'Web Development',
-      description: 'Galerie foto creativă cu animații fluide, menită să pună în valoare munca creativă.',
-      image: 'https://images.unsplash.com/photo-1452587925148-ce544e77e70d?auto=format&fit=crop&q=80&w=800',
-      url: null
-    },
-    {
-      title: 'Aplicație Imobiliară',
-      category: 'Web Application',
-      description: 'Platformă avansată de anunțuri cu filtre complexe și interfață vizuală premium.',
-      image: 'https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&q=80&w=800',
+      title: 'Dashboard Gestiune',
+      category: 'UI/UX Concept',
+      description: 'Tablou de bord intern cu grafice în timp real pentru administrarea afacerii.',
+      image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=800',
       url: null
     }
   ];
