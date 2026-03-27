@@ -10,6 +10,13 @@ const Portfolio = () => {
 
   const projects = [
     {
+      title: 'DocuMind AI',
+      category: 'RAG & AI Analysis',
+      description: 'Platformă inteligentă de Q&A pentru documente PDF. Folosește RAG (Retrieval-Augmented Generation) cu vectori locali (Transformers.js) și Gemini 2.5 Flash pentru răspunsuri ultra-rapide și 100% gratuite.',
+      image: '/documind-ai.png',
+      url: 'https://ai-doc-qa-ly02.onrender.com'
+    },
+    {
       title: 'T3 Money Guard',
       category: 'Web Application',
       description: 'Aplicație avansată de management financiar personal (Personal Finance Tracker), cu istoric de tranzacții, statistici lunare și design premium adaptabil.',
