@@ -24,6 +24,13 @@ const Portfolio = () => {
       url: 'https://rudopulos.github.io/T3-Money-Guard/'
     },
     {
+      title: 'Task Pro',
+      category: 'Full-Stack Kanban App',
+      description: 'Aplicație complexă de management al task-urilor cu drag-and-drop, multiple board-uri și teme personalizabile. Include autentificare securizată și gestiune eficientă a fluxului de lucru.',
+      image: 'https://images.unsplash.com/photo-1540350394557-8d14678e7f91?auto=format&fit=crop&q=80&w=800',
+      url: 'https://florinfire80.github.io/TaskPro_FrontEnd/'
+    },
+    {
       title: 'WebStudio - Landing Page',
       category: 'Web Development (Practice)',
       description: 'Implementare modernă de landing page utilizând HTML semantic, cu arhitectură avansată SCSS și metodologie BEM, integrând funcționalități interactive prin JS nativ.',
