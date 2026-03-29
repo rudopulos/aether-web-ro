@@ -28,7 +28,7 @@ const Portfolio = () => {
       category: 'Full-Stack Kanban App',
       description: 'Aplicație complexă de management al task-urilor cu drag-and-drop, multiple board-uri și teme personalizabile. Include autentificare securizată și gestiune eficientă a fluxului de lucru.',
       image: 'https://images.unsplash.com/photo-1540350394557-8d14678e7f91?auto=format&fit=crop&q=80&w=800',
-      url: 'https://florinfire80.github.io/TaskPro_FrontEnd/'
+      url: 'https://rudopulos.github.io/TaskPro_FrontEnd-Public/'
     },
     {
       title: 'WebStudio - Landing Page',
