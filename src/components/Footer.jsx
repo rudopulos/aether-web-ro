@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Mail, Phone, MapPin, Facebook, Twitter, Linkedin, Instagram } from 'lucide-react';
+import { Mail, Phone, MapPin } from 'lucide-react';
 
 const Footer = () => {
   return (
@@ -60,20 +60,6 @@ const Footer = () => {
                 <MapPin size={16} className="primary-text" />
                 <span>București, România</span>
               </div>
-            </div>
-            <div className="flex space-x-4 mt-6">
-              <a href="#" className="text-[var(--text-light)] hover:primary-text transition-colors">
-                <Facebook size={20} />
-              </a>
-              <a href="#" className="text-[var(--text-light)] hover:primary-text transition-colors">
-                <Twitter size={20} />
-              </a>
-              <a href="#" className="text-[var(--text-light)] hover:primary-text transition-colors">
-                <Linkedin size={20} />
-              </a>
-              <a href="#" className="text-[var(--text-light)] hover:primary-text transition-colors">
-                <Instagram size={20} />
-              </a>
             </div>
           </div>
         </div>
