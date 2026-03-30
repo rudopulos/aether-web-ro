@@ -46,14 +46,14 @@ const Home = () => {
         <meta property="og:url" content="https://aetherweb.ro/" />
         <meta property="og:title" content="AETHER WEB TECHNOLOGIES | Soluții Digitale & Web Development" />
         <meta property="og:description" content="Transformăm viziunea afacerii tale într-o prezență online de succes. Servicii digitale complete, moderne și optimizate." />
-        <meta property="og:image" content="https://aetherweb.ro/logo.png" />
+        <meta property="og:image" content="https://aetherweb.ro/favicon.png" />
 
         {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:url" content="https://aetherweb.ro/" />
         <meta name="twitter:title" content="AETHER WEB TECHNOLOGIES | Soluții Digitale & Web Development" />
         <meta name="twitter:description" content="Transformăm viziunea afacerii tale într-o prezență online de succes. Servicii digitale complete, moderne și optimizate." />
-        <meta name="twitter:image" content="https://aetherweb.ro/logo.png" />
+        <meta name="twitter:image" content="https://aetherweb.ro/favicon.png" />
       </Helmet>
 
       <section className="relative flex items-center overflow-hidden pt-56 pb-20 bg-[var(--light-bg)]"> {/* Increased top padding here */}

@@ -8,7 +8,7 @@ const Footer = () => {
       <div className="container mx-auto px-4 py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           <div>
-            <img alt="AETHER WEB TECHNOLOGIES Logo" className="h-16 lg:h-20 w-auto mb-4 -ml-4" src="/logo.png" />
+            <img alt="AETHER WEB TECHNOLOGIES Logo" className="h-20 lg:h-24 w-auto mb-4 -ml-4" src="https://horizons-cdn.hostinger.com/bee45e2c-608a-4b91-997a-7b30b0419a03/4683042c1ba432961a2ad98bd174df4e.png" />
             <p className="text-sm mb-4">
               Construim soluții digitale moderne și site-uri rapide pentru afacerile viitorului.
             </p>
