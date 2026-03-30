@@ -78,10 +78,14 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="border-t border-gray-200 mt-8 pt-8 text-center">
-          <p className="text-sm">
+        <div className="border-t border-gray-200 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center text-center">
+          <p className="text-sm mb-4 md:mb-0">
             © 2025 AETHER WEB TECHNOLOGIES. Toate drepturile rezervate.
           </p>
+          <div className="flex space-x-6 text-sm">
+             <Link to="/privacy-policy" className="hover:primary-text transition-colors">Politica de Confidențialitate</Link>
+             <Link to="/terms" className="hover:primary-text transition-colors">Termeni și Condiții</Link>
+          </div>
         </div>
       </div>
     </footer>

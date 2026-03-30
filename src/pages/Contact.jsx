@@ -168,6 +168,19 @@ const Contact = () => {
                     ></textarea>
                   </div>
 
+                  <div className="flex items-start gap-3">
+                    <input 
+                      type="checkbox" 
+                      id="gdpr-consent" 
+                      required 
+                      className="mt-1 w-4 h-4 text-[var(--primary-blue)] border-gray-300 rounded focus:ring-[var(--primary-blue)]"
+                    />
+                    <label htmlFor="gdpr-consent" className="text-sm text-[var(--text-light)]">
+                      Sunt de acord cu <a href="/terms" target="_blank" className="text-[var(--primary-blue)] hover:underline">Termenii și Condițiile</a> și 
+                      am citit <a href="/privacy-policy" target="_blank" className="text-[var(--primary-blue)] hover:underline">Politica de Confidențialitate</a> referitoare la datele mele personale *
+                    </label>
+                  </div>
+
                   <Button type="submit" size="lg" className="w-full bg-[var(--primary-blue)] text-white hover:bg-[var(--dark-blue)] group">
                     Trimite Mesajul
                     <Send className="ml-2 group-hover:translate-x-1 transition-transform" size={20} />
