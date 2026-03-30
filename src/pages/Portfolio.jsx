@@ -50,20 +50,6 @@ const Portfolio = () => {
       description: 'Website de prezentare modern și sofisticat, optimizat vizual pentru a evidenția proiectele unei agenții de design.',
       image: 'https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&q=80&w=800',
       url: 'https://byelitedesign.com/'
-    },
-    {
-      title: 'Sistem Rezervări Online',
-      category: 'Web Application',
-      description: 'Platformă pentru programări și rezervări, ideală pentru clinici sau restaurante.',
-      image: 'https://images.unsplash.com/photo-1542838132-92c53300491e?auto=format&fit=crop&q=80&w=800',
-      url: null
-    },
-    {
-      title: 'Dashboard Gestiune',
-      category: 'UI/UX Concept',
-      description: 'Tablou de bord intern cu grafice în timp real pentru administrarea afacerii.',
-      image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=800',
-      url: null
     }
   ];
 
