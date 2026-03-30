@@ -7,6 +7,7 @@ import { useToast } from '@/components/ui/use-toast';
 
 const Contact = () => {
   const { toast } = useToast();
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -22,20 +23,54 @@ const Contact = () => {
     });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    toast({
-      title: "Mesaj Trimis! ✉️",
-      description: "Îți mulțumim. Vom reveni cu un răspuns în cel mai scurt timp!",
-      duration: 5000,
-    });
-    setFormData({
-      name: '',
-      email: '',
-      phone: '',
-      subject: '',
-      message: ''
-    });
+    setIsSubmitting(true);
+
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify({
+          access_key: "d30028be-955f-43f0-a911-9ec12fc6439e",
+          ...formData,
+          from_name: "Aether Web Portfolio"
+        }),
+      });
+
+      const result = await response.json();
+
+      if (result.success) {
+        toast({
+          title: "Mesaj Trimis! ✉️",
+          description: "Îți mulțumim. Vom reveni cu un răspuns în cel mai scurt timp!",
+          duration: 5000,
+        });
+        setFormData({
+          name: '',
+          email: '',
+          phone: '',
+          subject: '',
+          message: ''
+        });
+        // Reset checkbox if possible or just rely on state reset if we had one for it
+        e.target.reset();
+      } else {
+        throw new Error(result.message || "Eroare la trimitere");
+      }
+    } catch (error) {
+      toast({
+        title: "Eroare! ❌",
+        description: "Nu am putut trimite mesajul. Te rugăm să încerci din nou sau să ne scrii direct pe mail.",
+        variant: "destructive",
+        duration: 5000,
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const contactInfo = [
@@ -181,9 +216,14 @@ const Contact = () => {
                     </label>
                   </div>
 
-                  <Button type="submit" size="lg" className="w-full bg-[var(--primary-blue)] text-white hover:bg-[var(--dark-blue)] group">
-                    Trimite Mesajul
-                    <Send className="ml-2 group-hover:translate-x-1 transition-transform" size={20} />
+                  <Button 
+                    type="submit" 
+                    size="lg" 
+                    disabled={isSubmitting}
+                    className="w-full bg-[var(--primary-blue)] text-white hover:bg-[var(--dark-blue)] group disabled:opacity-70"
+                  >
+                    {isSubmitting ? "Se trimite..." : "Trimite Mesajul"}
+                    {!isSubmitting && <Send className="ml-2 group-hover:translate-x-1 transition-transform" size={20} />}
                   </Button>
                 </form>
               </div>
