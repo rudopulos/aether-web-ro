@@ -38,8 +38,22 @@ const Home = () => {
   return (
     <>
       <Helmet>
-        <title>AETHER WEB TECHNOLOGIES - Creează. Inovează.</title>
-        <meta name="description" content="Servicii de web development și soluții digitale bazate pe AI. Creăm site-uri de prezentare de impact pentru afacerile moderne." />
+        <title>AETHER WEB TECHNOLOGIES | Soluții Digitale & Web Development</title>
+        <meta name="description" content="Agenție de dezvoltare web în București. Creăm site-uri de prezentare, aplicații complexe și soluții digitale bazate pe AI pentru succesul afacerii tale." />
+        
+        {/* Open Graph / Facebook */}
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://aetherweb.ro/" />
+        <meta property="og:title" content="AETHER WEB TECHNOLOGIES | Soluții Digitale & Web Development" />
+        <meta property="og:description" content="Transformăm viziunea afacerii tale într-o prezență online de succes. Servicii digitale complete, moderne și optimizate." />
+        <meta property="og:image" content="https://aetherweb.ro/logo.png" />
+
+        {/* Twitter */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:url" content="https://aetherweb.ro/" />
+        <meta name="twitter:title" content="AETHER WEB TECHNOLOGIES | Soluții Digitale & Web Development" />
+        <meta name="twitter:description" content="Transformăm viziunea afacerii tale într-o prezență online de succes. Servicii digitale complete, moderne și optimizate." />
+        <meta name="twitter:image" content="https://aetherweb.ro/logo.png" />
       </Helmet>
 
       <section className="relative flex items-center overflow-hidden pt-56 pb-20 bg-[var(--light-bg)]"> {/* Increased top padding here */}

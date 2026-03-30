@@ -56,7 +56,7 @@ const Header = () => {
 
           <div className="flex items-center justify-center">
             <Link to="/">
-              <img alt="AETHER WEB TECHNOLOGIES Logo" className="h-20 lg:h-32 w-auto" src="https://horizons-cdn.hostinger.com/bee45e2c-608a-4b91-997a-7b30b0419a03/4683042c1ba432961a2ad98bd174df4e.png" />
+              <img alt="AETHER WEB TECHNOLOGIES Logo" className="h-12 lg:h-16 w-auto" src="/logo.png" />
             </Link>
           </div>
           
