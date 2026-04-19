@@ -1,3 +1,5 @@
+import { Resend } from 'resend';
+
 export default async function handler(req, res) {
   // Permite doar metoda POST
   if (req.method !== 'POST') {
@@ -11,55 +13,45 @@ export default async function handler(req, res) {
     return res.status(400).json({ message: 'Campuri obligatorii lipsa.' });
   }
 
-  const accessKey = process.env.WEB3FORMS_ACCESS_KEY;
+  const resendApiKey = process.env.RESEND_API_KEY;
 
-  if (!accessKey) {
-    console.error('WEB3FORMS_ACCESS_KEY lipseste din environment variables!');
+  if (!resendApiKey) {
+    console.error('RESEND_API_KEY lipseste din environment variables!');
     return res.status(500).json({ success: false, message: 'Configuratie server incompleta.' });
   }
 
+  const resend = new Resend(resendApiKey);
+
   try {
-    const response = await fetch('https://api.web3forms.com/submit', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        'Accept': 'application/json',
-        'Origin': 'https://aetherweb.ro',
-        'Referer': 'https://aetherweb.ro/contact',
-      },
-      body: JSON.stringify({
-        access_key: accessKey,
-        name,
-        email,
-        phone,
-        subject,
-        message,
-        from_name: 'Aether Web Portfolio',
-        botcheck: false,
-      }),
+    const { data, error } = await resend.emails.send({
+      from: 'Aether Web Contact <onboarding@resend.dev>',
+      to: ['aetherweb.tech@gmail.com'],
+      subject: `[Aether Web] ${subject} - de la ${name}`,
+      html: `
+        <h2>Mesaj nou de pe aetherweb.ro</h2>
+        <p><strong>Nume:</strong> ${name}</p>
+        <p><strong>Email:</strong> ${email}</p>
+        <p><strong>Telefon:</strong> ${phone || 'Nespecificat'}</p>
+        <p><strong>Subiect:</strong> ${subject}</p>
+        <hr />
+        <p><strong>Mesaj:</strong></p>
+        <p>${message.replace(/\n/g, '<br/>')}</p>
+        <hr />
+        <small>Trimis de pe aether-web-ro.vercel.app</small>
+      `,
+      reply_to: email,
     });
 
-    // Citim raspunsul ca text intai, apoi incercam sa il parsam ca JSON
-    const rawText = await response.text();
-    console.log('Web3Forms HTTP status:', response.status);
-
-    let result;
-    try {
-      result = JSON.parse(rawText);
-    } catch {
-      console.error('Web3Forms raspuns non-JSON (status ' + response.status + '):', rawText.substring(0, 300));
-      return res.status(500).json({ success: false, message: 'Eroare la serviciul de email.' });
+    if (error) {
+      console.error('Resend eroare:', error);
+      return res.status(500).json({ success: false, message: error.message });
     }
 
-    if (result.success) {
-      return res.status(200).json({ success: true });
-    } else {
-      console.error('Web3Forms eroare:', result.message);
-      return res.status(500).json({ success: false, message: result.message });
-    }
+    console.log('Email trimis cu succes, ID:', data?.id);
+    return res.status(200).json({ success: true });
+
   } catch (error) {
-    console.error('Eroare la trimiterea formularului:', error.message);
+    console.error('Eroare la trimiterea emailului:', error.message);
     return res.status(500).json({ success: false, message: 'Eroare interna de server.' });
   }
 }
-
