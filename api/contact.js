@@ -23,7 +23,9 @@ export default async function handler(req, res) {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
-        Accept: 'application/json',
+        'Accept': 'application/json',
+        'Origin': 'https://aetherweb.ro',
+        'Referer': 'https://aetherweb.ro/contact',
       },
       body: JSON.stringify({
         access_key: accessKey,
@@ -39,12 +41,13 @@ export default async function handler(req, res) {
 
     // Citim raspunsul ca text intai, apoi incercam sa il parsam ca JSON
     const rawText = await response.text();
+    console.log('Web3Forms HTTP status:', response.status);
 
     let result;
     try {
       result = JSON.parse(rawText);
     } catch {
-      console.error('Web3Forms a returnat un raspuns non-JSON:', rawText.substring(0, 200));
+      console.error('Web3Forms raspuns non-JSON (status ' + response.status + '):', rawText.substring(0, 300));
       return res.status(500).json({ success: false, message: 'Eroare la serviciul de email.' });
     }
 
