@@ -28,17 +28,13 @@ const Contact = () => {
     setIsSubmitting(true);
 
     try {
-      const response = await fetch("https://api.web3forms.com/submit", {
+      const response = await fetch("/api/contact", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
           Accept: "application/json",
         },
-        body: JSON.stringify({
-          access_key: "0b311c8e-cb79-4657-9b53-cf538beb5403",
-          ...formData,
-          from_name: "Aether Web Portfolio"
-        }),
+        body: JSON.stringify(formData),
       });
 
       const result = await response.json();
@@ -124,6 +120,8 @@ const Contact = () => {
               <div className="bg-white rounded-2xl shadow-lg p-8 border border-gray-100">
                 <h2 className="text-3xl font-bold dark-text mb-6">Trimite-ne un mesaj</h2>
                 <form onSubmit={handleSubmit} className="space-y-6">
+                  {/* Honeypot anti-spam - ascuns de utilizatori, prins de boți */}
+                  <input type="checkbox" name="botcheck" className="hidden" style={{ display: 'none' }} />
                   <div>
                     <label htmlFor="name" className="block text-sm font-medium dark-text mb-2">
                       Nume Complet *
