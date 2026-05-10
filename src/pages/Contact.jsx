@@ -73,8 +73,8 @@ const Contact = () => {
     {
       icon: <Mail className="w-6 h-6 text-[var(--primary-blue)]" />,
       title: 'Email',
-      content: 'aetherweb.tech@gmail.com',
-      link: 'mailto:aetherweb.tech@gmail.com'
+      content: 'contact@aetherweb.ro',
+      link: 'mailto:contact@aetherweb.ro'
     },
     {
       icon: <Phone className="w-6 h-6 text-[var(--primary-blue)]" />,

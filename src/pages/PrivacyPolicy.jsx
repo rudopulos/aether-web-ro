@@ -65,7 +65,7 @@ const PrivacyPolicy = () => {
               </ul>
 
               <p className="mt-8 font-semibold">
-                Pentru orice cerere legată de drepturile de mai sus, ne puteți contacta prin e-mail la adresa: <strong>aetherweb.tech@gmail.com</strong>.
+                Pentru orice cerere legată de drepturile de mai sus, ne puteți contacta prin e-mail la adresa: <strong>contact@aetherweb.ro</strong>.
               </p>
             </div>
           </motion.div>

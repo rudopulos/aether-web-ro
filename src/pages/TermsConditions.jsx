@@ -58,7 +58,7 @@ const TermsConditions = () => {
 
               <div className="mt-8 p-6 bg-blue-50/50 rounded-lg border border-blue-100">
                 <p className="mb-2 font-semibold dark-text">Pentru întrebări sau sugestii:</p>
-                <p>Contactați-ne prin e-mail la: <a href="mailto:aetherweb.tech@gmail.com" className="text-[var(--primary-blue)] hover:underline">aetherweb.tech@gmail.com</a></p>
+                <p>Contactați-ne prin e-mail la: <a href="mailto:contact@aetherweb.ro" className="text-[var(--primary-blue)] hover:underline">contact@aetherweb.ro</a></p>
                 <p>Sau la telefon: <a href="tel:0744915610" className="text-[var(--primary-blue)] hover:underline">0744915610</a></p>
               </div>
             </div>
