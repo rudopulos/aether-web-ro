@@ -25,7 +25,7 @@ export default async function handler(req, res) {
   try {
     const { data, error } = await resend.emails.send({
       from: 'Aether Web Contact <onboarding@resend.dev>',
-      to: ['aetherweb.tech@gmail.com'],
+      to: ['rudopulos@yahoo.com'],
       subject: `[Aether Web] ${subject} - de la ${name}`,
       html: `
         <h2>Mesaj nou de pe aetherweb.ro</h2>
